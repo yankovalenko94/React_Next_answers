@@ -1,0 +1,16 @@
+export default function SearchIcon() {
+	return (
+		<svg
+			className="size-6"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			strokeWidth="1.6"
+			strokeLinecap="round"
+			aria-hidden="true"
+		>
+			<circle cx="10.5" cy="10.5" r="6.5" />
+			<path d="m16 16 5 5" />
+		</svg>
+	);
+}

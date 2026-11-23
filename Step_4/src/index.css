@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #08090a;
+  --color-carbon: #0f1011;
+  --color-obsidian: #161718;
+  --color-graphite: #23252a;
+  --color-smoke: #383b3f;
+  --color-fog: #a4a7ad;
+  --color-mist: #d0d6e0;
+  --color-paper: #ffffff;
+  --color-acid: #e4f222;
+  --font-sans: Arial, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    font-feature-settings: "cv01" on, "ss03" on, "zero" on;
+  }
+
+  body {
+    @apply m-0 min-w-80 bg-void font-sans text-mist antialiased;
+  }
+
+  button, input, textarea, select {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-mist;
+  }
+
+  button, select {
+    @apply cursor-pointer;
+  }
+}
+
+@utility panel {
+  @apply rounded-xl border border-smoke bg-carbon;
+}
+
+@utility field {
+  @apply w-full rounded-md border border-smoke bg-obsidian px-4 py-2.5 text-lg leading-6 text-mist placeholder:text-fog;
+}
+
+@utility filter-button {
+  @apply rounded-md border border-smoke px-4 py-2 text-xl leading-6 hover:bg-obsidian;
+}
+
+@utility icon-button {
+  @apply flex size-10 shrink-0 items-center justify-center rounded-md border border-smoke text-mist hover:bg-obsidian hover:text-paper;
+}
